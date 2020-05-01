@@ -835,7 +835,18 @@
 
             document.getElementById(sounds.call).pause();
             document.getElementById(sounds.end).play();
-
+            // addded by sukhdev for hide  stop call if caller discconect the  call
+            $(ui.income_call).modal('hide');
+             document.getElementById(sounds.rington).pause();
+            if(call.callTimer) {
+                            $('#timer').addClass('invisible');
+                            clearInterval(call.callTimer);
+                            call.callTimer = null;
+                            call.callTime = 0;
+                            app.helpers.network = {};
+                        }
+             
+             
             $('.j-actions').removeClass('hangup');
             $('.j-caller__ctrl').removeClass('active');
             $(ui.bandwidthSelect).attr('disabled', false);

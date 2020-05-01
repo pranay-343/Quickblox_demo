@@ -16,7 +16,7 @@
 
     /** Test server / app by defaults */
     const creds = {
-        'appId': '9', 
+        'appId': '9',
         'authKey': 'hYDSGNYQrqVkfWd',
         'authSecret': 'LqN2pRL42Y2tEZL'
     };
